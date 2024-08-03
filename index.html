@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <title>Registration form with validation</title>
+</head>
+<body>
+    <main class="main">
+        <form action="#" name="myForm" class="myForm">
+            <div>
+                <label for="name" name="labelName">Name:</label>
+                <input type="text" name="userName" placeholder="Your name" minlength="2" maxlength="20"class="form_input"  required>
+            </div>
+            <div>
+                <label for="email" name="labelEmail">Email:</label>
+                <input type="email" name="email" placeholder="Your Email"class="form_input" required>
+            </div>
+            <div>
+                <label for="age" name="labelAge">Age:</label>
+                <input type="number" name="age" placeholder="Your age"class="form_input" required>
+            </div>
+            <div>
+                <label for="password" name="labelPassword">Password:</label>
+                <input type="password" name="password" minlength="8" placeholder="Your password" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/"class="form_input" required>
+            </div>
+            <div>
+                <label for="gender" class="form__label">Your Gender:</label>
+            <label for="gender_Male" class="form__label label_genderMale">
+                <input type="radio" id="genderMale" name="gender" value="male" class="form_input" class="form_input"/>Male
+            </label>
+            <label for="gender_Female" class="form__label">
+                <input type="radio" id="genderFemale" name="gender" value="female" class="form_input"class="form_input" />Female
+            </label>
+            </div>
+            <div>
+                <label for="selectProfession" class="form__label">Profession:</label>
+            <select id="select" name="profession" class="form__select"  required placeholder="Choose profession">
+                <option value="Doctor">Doctor</option>
+                <option value="Programmer">Programmer</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Designer">Designer</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Salesperson">Salesperson</option>
+                <option value="Other">Other..</option>
+            </select>
+            </div>
+            <div>
+                <label for="agreement" class="form__label">
+                    <input type="checkbox" id="checkbox" name="agreementCheckbox" class="form_input checkbox"  required/>I agree to data processing
+                </label>
+            </div>
+            <input type="submit" name="submit" value="submit" class="form__submit btn" id="formSubmit" disabled/>
+            <span class="error">*Please fill in all fields!</span>
+        </form>
+    </main>
+    <script src="assets/script/index.js"></script>
+</body>
+</html>
